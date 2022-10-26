@@ -53,6 +53,8 @@
 
             //获取上次执行时间
             let lastRunTime = new Date(lastRunItemDom.getElementsByTagName("time")[0].innerText)
+            //ETL上上次执行时间有问题
+            lastRunTime = new Date(lastRunTime.setDate(lastRunTime.getDate() + 1));
 
             //上次执行YMD和当天YMD不相等，代表今日未执行
             if (getYMDStr(lastRunTime) != currentYMDStr) {
