@@ -1,4 +1,5 @@
 const WEB_URL = "http://etl.data.sayweee.net/home"
+const WEB_URL2 = "http://airflow.data.sayweee.net/home"
 const clickCheckBtn = document.getElementById("clickCheck")
 const clickCheckNotRunBtn = document.getElementById("clickCheckNotRun")
 
@@ -30,9 +31,9 @@ clickCheckBtn.addEventListener("click", async () => {
     let tab = await getCurrentTab();
 
     //检查是否当前处于ETL网站
-    if (!tab.url.startsWith(WEB_URL)) {
+    if (!(tab.url.startsWith(WEB_URL) || tab.url.startsWith(WEB_URL2))) {
         const clickCheckResDom = document.getElementById("clickCheckRes")
-        clickCheckResDom.innerHTML = "您当前不处于ETL页面: http://etl.data.sayweee.net/home"
+        clickCheckResDom.innerHTML = "您当前不处于ETL页面: http://etl.data.sayweee.net/home http://airflow.data.sayweee.net/home"
         return
     }
 
@@ -88,7 +89,7 @@ clickCheckNotRunBtn.addEventListener("click", async () => {
     let tab = await getCurrentTab();
 
     //检查是否当前处于ETL网站
-    if (!tab.url.startsWith(WEB_URL)) {
+    if (!(tab.url.startsWith(WEB_URL) || tab.url.startsWith(WEB_URL2))) {
         const clickCheckNotRunResDom = document.getElementById("clickCheckNotRunRes")
         clickCheckNotRunResDom.innerHTML = "您当前不处于ETL页面: http://etl.data.sayweee.net/home"
         return
