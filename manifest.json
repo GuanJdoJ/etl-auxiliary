@@ -1,0 +1,22 @@
+{
+  "name": "ETL-Auxiliary",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "ETL巡检辅助工具",
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+  "permissions": ["scripting", "activeTab", "storage"]
+}

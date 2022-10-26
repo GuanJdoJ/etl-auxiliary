@@ -1,0 +1,11 @@
+.etl-auxiliary-err {
+    background-color: #ffccc7 !important;
+}
+
+.etl-auxiliary-delay {
+    background-color: #ffe7ba !important;
+}
+
+.etl-auxiliary-not-run {
+    background-color: #bae7ff !important;
+}

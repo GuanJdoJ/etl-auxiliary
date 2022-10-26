@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETL巡检辅助工具</title>
+    <style>
+        body {
+            width: 300px;
+            height: 300px;
+        }
+
+        div {
+            line-height: 1.8;
+        }
+
+        .divide {
+            margin: 8px 0;
+            height: 1px;
+            background-color: #0000000f;
+        }
+
+        .btn {
+            display: inline-block;
+            border: 1px solid transparent;
+            box-shadow: 0 2px #00000004;
+            padding: 4px 15px;
+            font-size: 14px;
+            border-radius: 2px;
+            color: #1890ff;
+            border-color: #1890ff;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .res {
+            margin-top: 4px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clickCheck" class="btn">检查延迟和报错</div>
+    <div id="clickCheckRes" class="res"></div>
+
+    <div class="divide"></div>
+
+    <div id="clickCheckNotRun" class="btn">检查今日未执行</div>
+    <div id="clickCheckNotRunRes" class="res"></div>
+
+    <script src="popup.js"></script>
+</body>
+
+
+</html>
