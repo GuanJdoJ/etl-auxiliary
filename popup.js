@@ -129,8 +129,8 @@ clickCheckNotRunBtn.addEventListener("click", async () => {
 })
 
 async function init() {
-    const data = await chrome.storage.local.get("ETL")
-    const { delayCount, errCount, clickCheckTime } = data.ETL
+    const data = await chrome.storage.local.get("ETL") || {}
+    const { delayCount, errCount, clickCheckTime } = data.ETL || {}
     if (clickCheckTime) {
         document.getElementById("clickCheckRes").innerHTML = `
         <div>上次成功执行结果：</div>
@@ -139,8 +139,8 @@ async function init() {
         <div>${clickCheckTime}</div>
         `
     }
-    const data2 = await chrome.storage.local.get("ETL_NOT_RUN")
-    const { notRunCount, notRunClickCheckTime } = data2.ETL_NOT_RUN
+    const data2 = await chrome.storage.local.get("ETL_NOT_RUN") || {}
+    const { notRunCount, notRunClickCheckTime } = data2.ETL_NOT_RUN || {}
     if (notRunClickCheckTime) {
         document.getElementById("clickCheckNotRunRes").innerHTML = `
         <div>上次成功执行结果：</div>

@@ -1,8 +1,8 @@
 (function () {
     //应该使用的时区
-    const TIME_ZONE = 'PDT (-07:00)'
-    //当前PDT时间
-    const PDTTime = new Date(new Date().getTime() - 15 * 60 * 60 * 1000);
+    const TIME_ZONE = 'PST (-08:00)'//冬令时 夏令时为PDT (-07:00)
+    //当前PDT时间 15夏令时 16冬令时
+    const PDTTime = new Date(new Date().getTime() - 16 * 60 * 60 * 1000);
 
     function getYMDStr(time) {
         return `${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()}`;
